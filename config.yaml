@@ -1,0 +1,23 @@
+proxy:
+  secretToken: "<RANDOM_HEX>" # 32-byte string
+singleuser:
+  image:
+    name: ferlabcrsj/spark-all-notebook
+    tag: spark-3.1.2
+  storage:
+    dynamic:
+      storageClass: nfs-client
+  defaultUrl: "/lab" # use the new JupyterLab UI by default
+hub:
+  db:
+    pvc:
+      storageClassName: nfs-client
+  config:
+    Authenticator:
+      admin_users:
+        - admin
+    FirstUseAuthenticator:
+      create_users: false
+    JupyterHub:
+      authenticator_class: 'firstuseauthenticator.FirstUseAuthenticator'
+      admin_access: true
