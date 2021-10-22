@@ -2,8 +2,8 @@ proxy:
   secretToken: "<RANDOM_HEX>" # 32-byte string
 singleuser:
   image:
-    name: ferlabcrsj/spark-all-notebook
-    tag: spark-3.1.2
+    name: ferlabcrsj/all-spark-notebook
+    tag: 3.1.2
   storage:
     dynamic:
       storageClass: nfs-client
