@@ -7,7 +7,8 @@ USER root
 ## add required jars in spark_default.conf
 COPY ./set_dependencies.sh /
 RUN chmod +x /set_dependencies.sh
+RUN ./set_dependencies.sh
 
 # Specify the User that the actual main process will run as
-ARG SPARK_UID=185
+ARG SPARK_UID=1000
 USER ${SPARK_UID}

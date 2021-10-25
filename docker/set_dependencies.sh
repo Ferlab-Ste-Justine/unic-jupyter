@@ -16,9 +16,11 @@ packages="spark.jars.packages "
 
 echo "Add spark.jars.package..."
 
-for package in ${POSTGRESQL} ${AWS_SDK} ${AWS_HADOOP} ${FERLAB_SPARK31} ${MSSQL_JDBC} ${ADAL4J} ${MSSQL_SPARK_CONNECTOR} ${DELTA_CORE}; do
+for package in ${POSTGRESQL} ${AWS_SDK} ${AWS_HADOOP} ${FERLAB_SPARK31} ${MSSQL_JDBC} ${ADAL4J} ${MSSQL_SPARK_CONNECTOR}; do
     echo "Adding ${package}"
     packages+="${package},"
 done
+
+packages+=${DELTA_CORE}
 
 echo ${packages} >> ${SPARK_HOME}/conf/spark-defaults.conf

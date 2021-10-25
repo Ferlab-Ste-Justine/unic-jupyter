@@ -1,5 +1,5 @@
 proxy:
-  secretToken: "<RANDOM_HEX>" # 32-byte string
+  secretToken: "RANDOMHEX" # 32-byte string
 singleuser:
   image:
     name: ferlabcrsj/all-spark-notebook
