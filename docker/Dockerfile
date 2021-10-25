@@ -1,4 +1,4 @@
-ARG BASE_IMG="jupyter/all-spark-notebook:spark-3.1.2"
+ARG BASE_IMG="jupyter/all-spark-notebook:spark-3.2.0"
 FROM $BASE_IMG
 WORKDIR /
 
