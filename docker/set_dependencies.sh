@@ -7,6 +7,8 @@ POSTGRESQLV="42.2.23"
 POSTGRESQL="org.postgresql:postgresql:${POSTGRESQLV}"
 AWS_SDK="com.amazonaws:aws-java-sdk-bundle:1.11.901"
 AWS_HADOOP="org.apache.hadoop:hadoop-aws:3.3.1"
+HADOOP_COMMON="org.apache.hadoop:hadoop-common:3.3.1"
+HADOOP_MR_CORE="org.apache.hadoop:hadoop-mapreduce-client-core:3.3.1"
 FERLAB_SPARK31="bio.ferlab:datalake-spark31_2.12:0.1.11"
 MSSQL_JDBC="com.microsoft.sqlserver:mssql-jdbc:8.4.1.jre8"
 ADAL4J="com.microsoft.aad:adal4j:0.0.2"
@@ -17,7 +19,7 @@ packages="spark.jars.packages "
 
 echo "Add spark.jars.package..."
 
-for package in ${POSTGRESQL} ${AWS_SDK} ${AWS_HADOOP} ${FERLAB_SPARK31} ${MSSQL_JDBC} ${ADAL4J} ${MSSQL_SPARK_CONNECTOR}; do
+for package in ${POSTGRESQL} ${AWS_SDK} ${AWS_HADOOP} ${HADOOP_COMMON} ${HADOOP_MR_CORE} ${FERLAB_SPARK31} ${MSSQL_JDBC} ${ADAL4J} ${MSSQL_SPARK_CONNECTOR}; do
     echo "Adding ${package}"
     packages+="${package},"
 done
