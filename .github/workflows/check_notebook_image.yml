@@ -13,6 +13,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Log into registry
         run: echo "${{ secrets.FERLAB_DOCKER_HUB_TOKEN }}" | docker login -u ${{ secrets.FERLAB_DOCKER_HUB_USER }} --password-stdin
-      - name: Build image
+      - name: Build spark_320_hadoop_322
         run: docker build -t ferlabcrsj/all-spark-notebook:3.1.2 .
-        working-directory: docker
+        working-directory: spark_320_hadoop_322
+      - name: Build spark_320_hadoop_331
+        run: docker build -t ferlabcrsj/all-spark-notebook:3.2.0 .
+        working-directory: spark_320_hadoop_331
