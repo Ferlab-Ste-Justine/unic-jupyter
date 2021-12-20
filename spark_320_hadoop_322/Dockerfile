@@ -17,3 +17,4 @@ RUN cat /spark-default-extra.conf >> ${SPARK_HOME}/conf/spark-defaults.conf
 # Specify the User that the actual main process will run as
 ARG SPARK_UID=1000
 USER ${SPARK_UID}
+RUN pip install pandas-profiling[notebook]
