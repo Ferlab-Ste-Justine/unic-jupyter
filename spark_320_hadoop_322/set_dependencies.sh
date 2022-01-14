@@ -11,16 +11,20 @@ AWS_HADOOP="org.apache.hadoop:hadoop-aws:${HADOOPV}"
 HADOOP_COMMON="org.apache.hadoop:hadoop-common:${HADOOPV}"
 HADOOP_MR_CORE="org.apache.hadoop:hadoop-mapreduce-client-core:${HADOOPV}"
 FERLAB_SPARK31="bio.ferlab:datalake-spark31_2.12:0.2.1"
-MSSQL_JDBC="com.microsoft.sqlserver:mssql-jdbc:8.4.1.jre8"
-ADAL4J="com.microsoft.aad:adal4j:0.0.2"
+MSSQL_ADAL4J="com.microsoft.aad:adal4j:0.0.2"
+MSSQL_JDBC="com.microsoft.sqlserver:mssql-jdbc:9.4.1.jre8"
 MSSQL_SPARK_CONNECTOR="com.microsoft.azure:spark-mssql-connector_2.12:1.2.0"
+MSSQL_MSAL4J="com.microsoft.azure:msal4j:1.11.0"
+AZURE_CORE="com.azure:azure-core:1.24.1"
+AZURE_CORE_NETTY="com.azure:azure-core-http-netty:1.11.6"
+AZURE_CORE_SECURITY="com.azure:azure-security-keyvault-keys:4.3.5"
 DELTA_CORE="io.delta:delta-core_2.12:1.1.0"
 
 packages="spark.jars.packages "
 
 echo "Add spark.jars.package..."
 
-for package in ${POSTGRESQL} ${AWS_SDK} ${AWS_HADOOP} ${HADOOP_COMMON} ${HADOOP_MR_CORE} ${FERLAB_SPARK31} ${MSSQL_JDBC} ${ADAL4J} ${MSSQL_SPARK_CONNECTOR}; do
+for package in ${POSTGRESQL} ${AWS_SDK} ${AWS_HADOOP} ${HADOOP_COMMON} ${HADOOP_MR_CORE} ${FERLAB_SPARK31} ${MSSQL_ADAL4J} ${MSSQL_JDBC} ${MSSQL_SPARK_CONNECTOR} ${MSSQL_MSAL4J} ${AZURE_CORE} ${AZURE_CORE_NETTY} ${AZURE_CORE_SECURITY}; do
     echo "Adding ${package}"
     packages+="${package},"
 done
