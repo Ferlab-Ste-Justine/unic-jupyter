@@ -3,12 +3,12 @@ set -e
 
 SPARK_HOME="/usr/local/spark"
 
-FERLAB_SPARK31="bio.ferlab:datalake-spark31_2.12:0.2.16"
+FERLAB_SPARK31="bio.ferlab:datalake-spark31_2.12:0.2.18"
 
 POSTGRESQLV="42.2.23"
-HADOOPV="3.2.2"
+HADOOPV="3.3.1"
 POSTGRESQL="org.postgresql:postgresql:${POSTGRESQLV}"
-AWS_SDK="com.amazonaws:aws-java-sdk-bundle:1.11.563"
+AWS_SDK="com.amazonaws:aws-java-sdk-bundle:1.11.901"
 AWS_SOFTWARE_SDK="software.amazon.awssdk:s3:2.17.71"
 AWS_HADOOP="org.apache.hadoop:hadoop-aws:${HADOOPV}"
 HADOOP_COMMON="org.apache.hadoop:hadoop-common:${HADOOPV}"
