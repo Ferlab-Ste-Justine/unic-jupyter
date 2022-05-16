@@ -35,6 +35,6 @@ done
 packages+=${DELTA_CORE}
 
 echo ${packages} >> ${SPARK_HOME}/conf/spark-defaults.conf
-echo "spark.jars /opt/spark/jars/postgresql-${POSTGRESQLV}.jar" >> ${SPARK_HOME}/conf/spark-defaults.conf
+echo "spark.jars /usr/local/spark/jars/postgresql-${POSTGRESQLV}.jar" >> ${SPARK_HOME}/conf/spark-defaults.conf
 
 chown jovyan ${SPARK_HOME}/conf/spark-defaults.conf
