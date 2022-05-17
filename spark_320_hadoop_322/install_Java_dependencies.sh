@@ -22,12 +22,13 @@ AZURE_CORE_NETTY="com.azure:azure-core-http-netty:1.11.6"
 AZURE_CORE_SECURITY="com.azure:azure-security-keyvault-keys:4.3.5"
 DELTA_CORE="io.delta:delta-core_2.12:1.1.0"
 SCHEMA_CRAWLER="us.fatehi:schemacrawler:16.16.11"
+XML_DATABRICKS="com.databricks:spark-xml_2.12:0.14.0"
 
 packages="spark.jars.packages "
 
 echo "Add spark.jars.package..."
 
-for package in ${POSTGRESQL} ${AWS_SDK} ${AWS_SOFTWARE_SDK} ${AWS_HADOOP} ${HADOOP_COMMON} ${HADOOP_MR_CORE} ${FERLAB_SPARK31} ${MSSQL_ADAL4J} ${MSSQL_JDBC} ${MSSQL_SPARK_CONNECTOR} ${MSSQL_MSAL4J} ${AZURE_CORE} ${AZURE_CORE_NETTY} ${AZURE_CORE_SECURITY} ${SCHEMA_CRAWLER}; do
+for package in ${POSTGRESQL} ${AWS_SDK} ${AWS_SOFTWARE_SDK} ${AWS_HADOOP} ${HADOOP_COMMON} ${HADOOP_MR_CORE} ${FERLAB_SPARK31} ${MSSQL_ADAL4J} ${MSSQL_JDBC} ${MSSQL_SPARK_CONNECTOR} ${MSSQL_MSAL4J} ${AZURE_CORE} ${AZURE_CORE_NETTY} ${AZURE_CORE_SECURITY} ${SCHEMA_CRAWLER} ${XML_DATABRICKS}; do
     echo "Adding ${package}"
     packages+="${package},"
 done
