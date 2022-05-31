@@ -19,9 +19,3 @@ jobs:
       - name: Push image spark_320_hadoop_322
         run: docker push ferlabcrsj/all-spark-notebook:3.1.2
         working-directory: spark_320_hadoop_322
-      - name: Build image spark_320_hadoop_331
-        run: docker build -t ferlabcrsj/all-spark-notebook:3.2.0 .
-        working-directory: spark_320_hadoop_331
-      - name: Push image spark_320_hadoop_331
-        run: docker push ferlabcrsj/all-spark-notebook:3.2.0
-        working-directory: spark_320_hadoop_331

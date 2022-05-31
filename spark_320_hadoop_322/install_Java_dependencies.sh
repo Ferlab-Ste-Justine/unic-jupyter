@@ -3,7 +3,7 @@ set -e
 
 SPARK_HOME="/usr/local/spark"
 
-FERLAB_SPARK31="bio.ferlab:datalake-spark31_2.12:0.2.34"
+FERLAB_SPARK31="bio.ferlab:datalake-spark31_2.12:0.2.42"
 
 POSTGRESQLV="42.2.23"
 HADOOPV="3.2.2"
