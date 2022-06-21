@@ -3,7 +3,7 @@ set -e
 
 SPARK_HOME="/usr/local/spark"
 
-FERLAB_SPARK31="bio.ferlab:datalake-spark31_2.12:0.2.48"
+FERLAB_SPARK3="bio.ferlab:datalake-spark3_2.12:0.2.48"
 
 POSTGRESQLV="42.2.23"
 HADOOPV="3.2.2"
@@ -28,7 +28,7 @@ packages="spark.jars.packages "
 
 echo "Add spark.jars.package..."
 
-for package in ${POSTGRESQL} ${AWS_SDK} ${AWS_SOFTWARE_SDK} ${AWS_HADOOP} ${HADOOP_COMMON} ${HADOOP_MR_CORE} ${FERLAB_SPARK31} ${MSSQL_ADAL4J} ${MSSQL_JDBC} ${MSSQL_SPARK_CONNECTOR} ${MSSQL_MSAL4J} ${AZURE_CORE} ${AZURE_CORE_NETTY} ${AZURE_CORE_SECURITY} ${SCHEMA_CRAWLER} ${XML_DATABRICKS}; do
+for package in ${POSTGRESQL} ${AWS_SDK} ${AWS_SOFTWARE_SDK} ${AWS_HADOOP} ${HADOOP_COMMON} ${HADOOP_MR_CORE} ${FERLAB_SPARK3} ${MSSQL_ADAL4J} ${MSSQL_JDBC} ${MSSQL_SPARK_CONNECTOR} ${MSSQL_MSAL4J} ${AZURE_CORE} ${AZURE_CORE_NETTY} ${AZURE_CORE_SECURITY} ${SCHEMA_CRAWLER} ${XML_DATABRICKS}; do
     echo "Adding ${package}"
     packages+="${package},"
 done
