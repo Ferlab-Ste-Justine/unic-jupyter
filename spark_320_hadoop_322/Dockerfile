@@ -4,6 +4,10 @@ WORKDIR /
 
 USER root
 
+## install ubuntu packages
+RUN apt-get update
+RUN apt-get install -y libfontconfig1-dev
+
 ## add required jars in spark_default.conf
 COPY install_Java_dependencies.sh /
 COPY install_R_dependencies.sh /
