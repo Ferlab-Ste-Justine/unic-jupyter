@@ -9,3 +9,4 @@ Rscript -e 'install.packages("ggthemes", lib = "/usr/local/spark-3.2.0-bin-hadoo
 Rscript -e 'install.packages("plotly", lib = "/usr/local/spark-3.2.0-bin-hadoop3.2/R/lib", repos = "http://cran.us.r-project.org")'
 Rscript -e 'install.packages("flextable", lib = "/usr/local/spark-3.2.0-bin-hadoop3.2/R/lib", repos = "http://cran.us.r-project.org")'
 Rscript -e 'install.packages("kableExtra", lib = "/usr/local/spark-3.2.0-bin-hadoop3.2/R/lib", repos = "http://cran.us.r-project.org")'
+Rscript -e 'install.packages("gdtools", lib = "/usr/local/spark-3.2.0-bin-hadoop3.2/R/lib", repos = "http://cran.us.r-project.org")'
