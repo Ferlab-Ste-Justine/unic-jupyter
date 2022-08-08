@@ -13,7 +13,7 @@ RUN apt-get update
 RUN apt-get install -y libfontconfig1-dev
 RUN apt-get install -y gdebi-core
 
-RUN gdebi quarto-linux-amd64.deb
+RUN gdebi --non-interactive quarto-linux-amd64.deb
 
 ## add required jars in spark_default.conf
 COPY install_Java_dependencies.sh /
