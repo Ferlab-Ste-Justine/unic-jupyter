@@ -5,8 +5,15 @@ WORKDIR /
 USER root
 
 ## install ubuntu packages
+ARG QUARTO_VERSION="1.0.38"
+
+RUN curl -L https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb -o quarto-linux-amd64.deb
+
 RUN apt-get update
 RUN apt-get install -y libfontconfig1-dev
+RUN apt-get install -y gdebi-core
+
+RUN gdebi quarto-linux-amd64.deb
 
 ## add required jars in spark_default.conf
 COPY install_Java_dependencies.sh /
