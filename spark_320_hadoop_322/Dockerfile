@@ -31,6 +31,10 @@ RUN curl https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk-bundle/${AWS_
 RUN curl https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/${AWS_HADOOP_VERSION}/hadoop-aws-${AWS_HADOOP_VERSION}.jar -o /usr/local/spark/jars/hadoop-aws-${AWS_HADOOP_VERSION}.jar
 RUN curl https://repo1.maven.org/maven2/org/postgresql/postgresql/${POSTGRESQL_VERSION}/postgresql-${POSTGRESQL_VERSION}.jar -o /usr/local/spark/jars/postgresql-${POSTGRESQL_VERSION}.jar
 
+# Update conda and pandas (resolves to 1.4.4)
+RUN conda update -n base conda
+RUN conda update pandas
+
 RUN chmod +x /install_Java_dependencies.sh
 RUN ./install_Java_dependencies.sh
 RUN chmod +x /install_Python_dependencies.sh
