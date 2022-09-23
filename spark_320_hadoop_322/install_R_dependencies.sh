@@ -9,3 +9,5 @@ Rscript -e 'install.packages("aws.s3", version = "0.3.21", lib = "/usr/local/spa
 Rscript -e 'install.packages("reticulate", version = "1.22", lib = "/usr/local/spark-3.2.0-bin-hadoop3.2/R/lib", repos = "http://cran.us.r-project.org")'
 Rscript -e 'install.packages("ggthemes", version = "4.2.4", lib = "/usr/local/spark-3.2.0-bin-hadoop3.2/R/lib", repos = "http://cran.us.r-project.org")'
 Rscript -e 'install.packages("plotly", version = "4.10.0", lib = "/usr/local/spark-3.2.0-bin-hadoop3.2/R/lib", repos = "http://cran.us.r-project.org")'
+Rscript -e 'install.packages("sparklyr", version = "1.7.8", lib = "/usr/local/spark-3.2.0-bin-hadoop3.2/R/lib", repos = "http://cran.us.r-project.org")'
+Rscript -e 'install.packages("pbapply", version = "1.5", lib = "/usr/local/spark-3.2.0-bin-hadoop3.2/R/lib", repos = "http://cran.us.r-project.org")'
