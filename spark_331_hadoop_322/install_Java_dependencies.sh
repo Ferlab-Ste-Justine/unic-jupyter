@@ -3,7 +3,7 @@ set -e
 
 SPARK_HOME="/usr/local/spark"
 
-FERLAB_SPARK3="bio.ferlab:datalake-spark3_2.12:0.2.48"
+FERLAB_SPARK3="bio.ferlab:datalake-spark3_2.12:5.6.2"
 
 POSTGRESQLV="42.2.23"
 HADOOPV="3.2.2"
@@ -20,7 +20,7 @@ MSSQL_MSAL4J="com.microsoft.azure:msal4j:1.11.0"
 AZURE_CORE="com.azure:azure-core:1.24.1"
 AZURE_CORE_NETTY="com.azure:azure-core-http-netty:1.11.6"
 AZURE_CORE_SECURITY="com.azure:azure-security-keyvault-keys:4.3.5"
-DELTA_CORE="io.delta:delta-core_2.12:1.1.0"
+DELTA_CORE="io.delta:delta-core_2.12:2.1.1"
 SCHEMA_CRAWLER="us.fatehi:schemacrawler:16.16.11"
 XML_DATABRICKS="com.databricks:spark-xml_2.12:0.14.0"
 
